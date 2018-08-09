@@ -60,10 +60,10 @@ output "public_ssh_key" {
 
 # Private IP Addresses
 output "pvtagt_private_ip_addresses" {
-  value = ["${google_compute_pvtagt.pvtagts.*.network_interface.0.address}"]
+  value = ["${module.dcos-pvtagt-instances.*.network_interface.0.address}"]
 }
 
 # Public IP Addresses
 output "pvtagt_public_ip_addresses" {
-  value = ["${google_compute_pvtagt.pvtagts.*.network_interface.0.access_config.0.assigned_nat_ip}"]
+  value = ["${module.dcos-pvtagt-instances.*.network_interface.0.access_config.0.assigned_nat_ip}"]
 }
