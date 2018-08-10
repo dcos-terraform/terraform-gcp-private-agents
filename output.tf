@@ -1,6 +1,6 @@
 # Number of Instance
-output "num_pvtagts" {
-  value = "${var.num_pvtagts}"
+output "num_private_agents" {
+  value = "${var.num_private_agents}"
 }
 
 # Cluster Name
@@ -39,13 +39,13 @@ output "disk_size" {
 }
 
 # Instance Subnetwork Name
-output "pvtagt_subnetwork_name" {
-  value = "${var.pvtagt_subnetwork_name}"
+output "private_agent_subnetwork_name" {
+  value = "${var.private_agent_subnetwork_name}"
 }
 
 # Customer Provided Userdata
-output "gcp_user_data" {
-  value = "${var.gcp_user_data}"
+output "user_data" {
+  value = "${var.user_data}"
 }
 
 # SSH User
@@ -59,11 +59,11 @@ output "public_ssh_key" {
 }
 
 # Private IP Addresses
-output "pvtagt_private_ip_addresses" {
-  value = ["${module.dcos-pvtagt-instances.*.network_interface.0.address}"]
+output "private_ips" {
+  value = ["${module.dcos-pvtagt-instances.private_ips}"]
 }
 
 # Public IP Addresses
-output "pvtagt_public_ip_addresses" {
-  value = ["${module.dcos-pvtagt-instances.*.network_interface.0.access_config.0.assigned_nat_ip}"]
+output "public_ips" {
+  value = ["${module.dcos-pvtagt-instances.public_ips}"]
 }
