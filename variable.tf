@@ -54,3 +54,8 @@ variable "hostname_format" {
 variable "dcos_instance_os" {
   default = "centos_7.4"
 }
+
+# Deploy instance with preemptible scheduling. (bool)
+variable "scheduling_preemptible" {
+  default = "false"
+}

@@ -68,6 +68,11 @@ output "dcos_instance_os" {
   value = "${var.dcos_instance_os}"
 }
 
+# Preemptible Scheduling (bool)
+output "scheduling_preemptible" {
+  value = "${var.scheduling_preemptible}"
+}
+
 # Private Node Self Link
 output "instances_self_link" {
   value = ["${module.dcos-pvtagt-instances.instances_self_link}"]
