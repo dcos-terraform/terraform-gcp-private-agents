@@ -85,3 +85,9 @@ variable "scheduling_preemptible" {
   description = "scheduling preemptible"
   default     = "false"
 }
+
+variable "labels" {
+  description = "Add custom labels to all resources"
+  type        = "map"
+  default     = {}
+}
