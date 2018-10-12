@@ -37,6 +37,7 @@ module "pvtagts" {
 | disk_type | Disk Type to Leverage. The GCE disk type. Can be either 'pd-ssd', 'local-ssd', or 'pd-standard'. (optional) | string | - | yes |
 | hostname_format | Format the hostname inputs are index+1, region, cluster_name | string | `%[2]s-pvtagts-%[1]d` | no |
 | image | image | string | - | yes |
+| labels | Add custom labels to all resources | map | `<map>` | no |
 | machine_type | machine type | string | - | yes |
 | num_private_agents | Specify the amount of private agents. These agents will provide your main resources | string | - | yes |
 | private_agent_subnetwork_name | private agent subnetwork name | string | - | yes |
