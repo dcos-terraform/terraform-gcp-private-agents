@@ -79,6 +79,6 @@ output "instances_self_link" {
 }
 
 output "prereq_id" {
-  description = "Returns the ID of the prereq script for public agents (if image are not used)"
+  description = "Prereq id used for dependency"
   value       = "${module.dcos-pvtagt-instances.prereq_id}"
 }
