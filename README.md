@@ -60,7 +60,7 @@ module "pvtagts" {
 | machine_type | Instance Type |
 | name_prefix | Cluster Name |
 | num_private_agents | Specify the amount of private agents. These agents will provide your main resources |
-| prereq_id | Prereq id used for dependency |
+| prereq-id | Prereq id used for dependency |
 | private_agent_subnetwork_name | Instance Subnetwork Name |
 | private_ips | List of private ip addresses created by this module |
 | public_ips | List of public ip addresses created by this module |
