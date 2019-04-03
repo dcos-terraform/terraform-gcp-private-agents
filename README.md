@@ -8,7 +8,7 @@ Creates DC/OS Private Agent intances
 ```hcl
 module "pvtagts" {
   source = "dcos-terraform/instances/gcp"
-  version = "~> 0.1.0"
+  version = "~> 0.2.0"
 
   num_instance                   = "${var.instances_count}"
   disk_size                      = "${var.gcp_instances_disk_size}"
@@ -69,4 +69,3 @@ module "pvtagts" {
 | ssh_user | SSH User |
 | user_data | User data to be used on these instances (cloud-init) |
 | zone_list | Element by zone list |
-
