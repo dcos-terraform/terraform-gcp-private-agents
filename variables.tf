@@ -42,7 +42,7 @@ variable "user_data" {
 }
 
 variable "ssh_user" {
-  description = "SSH User"
+  description = "OS / SSH User"
 }
 
 variable "public_ssh_key" {
