@@ -31,7 +31,7 @@ module "pvtagts" {
 |------|-------------|:----:|:-----:|:-----:|
 | cluster\_name | Name of the DC/OS cluster | string | n/a | yes |
 | dcos\_instance\_os | Operating system to use. Instead of using your own AMI you could use a provided OS. | string | `"centos_7.4"` | no |
-| dcos\_version | Specifies which DC/OS version instruction to use. Options: 1.9.0, 1.8.8, etc. See dcos_download_path or dcos_version tree for a full list. | string | n/a | yes |
+| dcos\_version | Specifies which DC/OS version instruction to use. Options: 1.12.3, 1.11.10, etc. See dcos_download_path or dcos_version tree for a full list. | string | n/a | yes |
 | disk\_size | Disk Size in GB | string | n/a | yes |
 | disk\_type | Disk Type to Leverage The GCE disk type. Can be either 'pd-ssd', 'local-ssd', or 'pd-standard'. (optional) | string | n/a | yes |
 | hostname\_format | Format the hostname inputs are index+1, region, cluster_name | string | `"%[3]s-privateagent%[1]d-%[2]s"` | no |
@@ -42,7 +42,7 @@ module "pvtagts" {
 | private\_agent\_subnetwork\_name | Instance Subnetwork Name | string | n/a | yes |
 | public\_ssh\_key | SSH Public Key | string | n/a | yes |
 | scheduling\_preemptible | Deploy instance with preemptible scheduling. (bool) | string | `"false"` | no |
-| ssh\_user | OS / SSH User | string | n/a | yes |
+| ssh\_user | SSH User | string | n/a | yes |
 | tags | Add custom tags to all resources | list | `<list>` | no |
 | user\_data | User data to be used on these instances (cloud-init) | string | `""` | no |
 | zone\_list | Element by zone list | list | `<list>` | no |
@@ -57,10 +57,10 @@ module "pvtagts" {
 | image | Source image to boot from |
 | instances\_self\_link | List of instance self links |
 | machine\_type | Instance Type |
-| name\_prefix | Cluster Name |
+| name\_prefix | Name Prefix |
 | num\_private\_agents | Specify the amount of private agents. These agents will provide your main resources |
-| os\_user | OS / SSH User |
-| prereq-id | Prereq id used for dependency |
+| os\_user | The OS user to be used |
+| prereq-id | Returns the ID of the prereq script (if user_data or ami are not used) |
 | private\_agent\_subnetwork\_name | Instance Subnetwork Name |
 | private\_ips | List of private ip addresses created by this module |
 | public\_ips | List of public ip addresses created by this module |
