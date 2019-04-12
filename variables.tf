@@ -17,7 +17,6 @@ variable "dcos_version" {
 variable "zone_list" {
   description = "Element by zone list"
   type        = "list"
-  default     = []
 }
 
 variable "image" {
