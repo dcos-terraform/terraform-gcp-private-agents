@@ -74,3 +74,8 @@ variable "labels" {
   type        = "map"
   default     = {}
 }
+
+variable "name_prefix" {
+  description = "Name Prefix"
+  default     = ""
+}

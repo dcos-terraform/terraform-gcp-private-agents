@@ -38,6 +38,7 @@ module "dcos-pvtagt-instances" {
   }
 
   cluster_name             = "${var.cluster_name}"
+  prefix_name              = "${var.prefix_name}"
   hostname_format          = "${var.hostname_format}"
   num_instances            = "${var.num_private_agents}"
   image                    = "${var.image}"
