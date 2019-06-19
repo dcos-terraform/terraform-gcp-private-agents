@@ -69,6 +69,16 @@ variable "scheduling_preemptible" {
   default     = "false"
 }
 
+variable "guest_accelerator_type" {
+  description = "Type of guest accelerator"
+  default     = "nvidia-tesla-k80"
+}
+
+variable "guest_accelerator_count" {
+  description = "Count of guest accelerator type"
+  default     = 0
+}
+
 variable "labels" {
   description = "Add custom labels to all resources"
   type        = "map"
