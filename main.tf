@@ -52,7 +52,6 @@ module "dcos-pvtagt-instances" {
   disk_size                = "${var.disk_size}"
   tags                     = "${var.tags}"
   dcos_instance_os         = "${var.dcos_instance_os}"
-  dcos_version             = "${var.dcos_version}"
   scheduling_preemptible   = "${var.scheduling_preemptible}"
   guest_accelerator_type   = "${var.guest_accelerator_type}"
   guest_accelerator_count  = "${var.guest_accelerator_count}"
