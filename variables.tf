@@ -8,6 +8,7 @@ variable "cluster_name" {
 
 variable "machine_type" {
   description = "Instance Type"
+  default     = "n1-standard-2"
 }
 
 variable "dcos_version" {
@@ -21,14 +22,17 @@ variable "zone_list" {
 
 variable "image" {
   description = "Source image to boot from"
+  default     = ""
 }
 
 variable "disk_type" {
   description = "Disk Type to Leverage The GCE disk type. Can be either 'pd-ssd', 'local-ssd', or 'pd-standard'. (optional)"
+  default     = "pd-ssd"
 }
 
 variable "disk_size" {
   description = "Disk Size in GB"
+  default     = "120"
 }
 
 variable "private_agent_subnetwork_name" {
