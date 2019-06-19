@@ -65,8 +65,8 @@ variable "dcos_instance_os" {
 }
 
 variable "scheduling_preemptible" {
-  description = "Deploy instance with preemptible scheduling. (bool)"
-  default     = "false"
+  description = "Deploy instance with preemptible scheduling"
+  default     = false
 }
 
 variable "guest_accelerator_type" {
