@@ -45,7 +45,7 @@ module "pvtagts" {
 | labels | Add custom labels to all resources | map | `<map>` | no |
 | machine\_type | Instance Type | string | `"n1-standard-2"` | no |
 | name\_prefix | Name Prefix | string | `""` | no |
-| scheduling\_preemptible | Deploy instance with preemptible scheduling. (bool) | string | `"false"` | no |
+| scheduling\_preemptible | Deploy instance with preemptible scheduling | string | `"false"` | no |
 | tags | Add custom tags to all resources | list | `<list>` | no |
 | user\_data | User data to be used on these instances (cloud-init) | string | `""` | no |
 
@@ -67,7 +67,7 @@ module "pvtagts" {
 | private\_ips | List of private ip addresses created by this module |
 | public\_ips | List of public ip addresses created by this module |
 | public\_ssh\_key | SSH Public Key |
-| scheduling\_preemptible | Deploy instance with preemptible scheduling. (bool) |
+| scheduling\_preemptible | Deploy instance with preemptible scheduling |
 | user\_data | User data to be used on these instances (cloud-init) |
 | zone\_list | Element by zone list |
 
