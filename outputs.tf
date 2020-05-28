@@ -55,12 +55,12 @@ output "public_ssh_key" {
 
 output "private_ips" {
   description = "List of private ip addresses created by this module"
-  value       = [module.dcos-pvtagt-instances.private_ips]
+  value       = module.dcos-pvtagt-instances.private_ips
 }
 
 output "public_ips" {
   description = "List of public ip addresses created by this module"
-  value       = [module.dcos-pvtagt-instances.public_ips]
+  value       = module.dcos-pvtagt-instances.public_ips
 }
 
 output "dcos_instance_os" {
@@ -75,11 +75,10 @@ output "scheduling_preemptible" {
 
 output "instances_self_link" {
   description = "List of instance self links"
-  value       = [module.dcos-pvtagt-instances.instances_self_link]
+  value       = module.dcos-pvtagt-instances.instances_self_link
 }
 
 output "prereq-id" {
   description = "Returns the ID of the prereq script (if user_data or ami are not used)"
   value       = module.dcos-pvtagt-instances.prereq_id
 }
-
