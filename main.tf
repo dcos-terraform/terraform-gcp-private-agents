@@ -32,7 +32,7 @@ provider "google" {
 
 module "dcos-pvtagt-instances" {
   source  = "dcos-terraform/instance/gcp"
-  version = "~> 0.2.0"
+  version = "~> 0.3.0"
 
   providers = {
     google = google
@@ -59,4 +59,3 @@ module "dcos-pvtagt-instances" {
 
   labels = var.labels
 }
-
